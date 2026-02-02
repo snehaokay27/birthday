@@ -204,7 +204,7 @@ function reveal() {
 
   let password = prompt("💖 Enter the password to open my heart");
 
-  if (password === "divv") {
+  if (password && password.trim().toLowerCase() === "divv") {
 
     document.getElementById("clickBtn").classList.add("hide");
 
@@ -253,6 +253,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
