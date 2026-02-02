@@ -169,7 +169,9 @@ I Love Youuuu Endlessly, Deeply, Truly ❤️
   <button id="clickBtn" class="btn" onclick="reveal()">
     Open My Heart 💖
   </button>
-
+  <audio id="bgMusic" preload="auto">
+    <source src="raabta.mp3" type="audio/mpeg">
+  </audio>
   <div id="clickMsg">Scroll slowly… every memory is waiting 💕</div>
 
   <div id="photos">
@@ -194,22 +196,18 @@ I Love Youuuu Endlessly, Deeply, Truly ❤️
   </div>
 </div>
 
-<div id="yt"></div>
-
 <script>
 function reveal(){
   document.getElementById("clickBtn").classList.add("hide");
-  document.getElementById("musicStart").style.display="none";
 
-  const msg=document.getElementById("clickMsg");
-  msg.style.display="block";
+  const msg = document.getElementById("clickMsg");
+  msg.style.display = "block";
   setTimeout(()=>msg.style.opacity="1",300);
 
-  document.getElementById("yt").innerHTML=`
-    <iframe width="0" height="0"
-    src="https://youtu.be/zlt38OOqwDc?si=cyJts-Wz69B8-YIc?autoplay=1&start=57""
-    allow="autoplay"
-    style="display:none"></iframe>`;
+  // 🎵 MUSIC START FROM 57 SECONDS
+  const music = document.getElementById("bgMusic");
+  music.currentTime = 57;   // seconds (change if you want)
+  music.play();
 }
 
 /* Scroll reveal photos */
@@ -237,5 +235,6 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
