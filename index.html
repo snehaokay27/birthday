@@ -149,7 +149,7 @@ h1{
 <div class="card">
   <h1>💖 Happy Birthday 💖</h1>
   <div id="msg">
-My Love — Divv Ji (Ladduu, Motuu Bacchaa) 🐼❤️
+My Love — Divv 🐼❤️
 
 No matter how far you are, my heart knows where it belongs 💌  
 Every day, every moment, every feeling —  
@@ -160,18 +160,20 @@ With all my love, my care, and every thought of you 🥰
 Everything here holds a piece of what i feel for you.....💖
 
 I Miss Youuuuuu 🥺  
-I Love Youuuu Endlessly, Deeply, Truly ❤️  
+I Love Youuuu Endlessly, Deeply, Truly ❤️ 
 — Yours, Sneha
   </div>
 
 <!-- MUSIC HINT (VISIBLE FIRST) -->
-  <div id="musicStart">🎶 Please Tap “Open My Heart” bubuuu....</div>
+  <div id="musicStart">🎶 Tap “Open My Heart” bubuuu....</div>
   <button id="clickBtn" class="btn" onclick="reveal()">
     Open My Heart 💖
   </button>
-  <audio id="bgMusic" preload="auto">
+  
+  <audio id="bgMusic">
     <source src="raabta.mp3" type="audio/mpeg">
   </audio>
+  
   <div id="clickMsg">Scroll slowly… every memory is waiting 💕</div>
 
   <div id="photos">
@@ -204,9 +206,7 @@ function reveal(){
   msg.style.display = "block";
   setTimeout(()=>msg.style.opacity="1",300);
 
-  // 🎵 MUSIC START FROM 57 SECONDS
   const music = document.getElementById("bgMusic");
-  music.currentTime = 57;   // seconds (change if you want)
   music.play();
 }
 
@@ -235,6 +235,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
