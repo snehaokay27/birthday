@@ -201,6 +201,9 @@ I Love Youuuu Endlessly, Deeply, Truly ❤️
 
 <script>
 function reveal(){
+
+  const password = prompt("💖Enter the password to open my heart:");
+  if(password === "divv"){
   document.getElementById("clickBtn").classList.add("hide");
 
   //show photos after click
@@ -213,6 +216,10 @@ function reveal(){
 
   const music = document.getElementById("bgMusic");
   music.play();
+    
+  } else {
+    alert("Wrong password....try again🤍");
+  }
 
   //smooth scroll down
   window.scrollTo({ top: document.body.scrollheight, behavior: "smooth"});
@@ -243,6 +250,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
