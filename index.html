@@ -200,29 +200,30 @@ I Love Youuuu Endlessly, Deeply, Truly ❤️
 </div>
 
 <script>
-function reveal(){
+function reveal() {
 
-  const password = prompt("💖Enter the password to open my heart:");
-  if(password === "divv"){
-  document.getElementById("clickBtn").classList.add("hide");
+  let password = prompt("💖 Enter the password to open my heart");
 
-  //show photos after click
-  document.getElementById("photos").style.display = "block";
-  
+  if (password === "divv") {
 
-  const msg = document.getElementById("clickMsg");
-  msg.style.display = "block";
-  setTimeout(()=>msg.style.opacity="1",300);
+    document.getElementById("clickBtn").classList.add("hide");
 
-  const music = document.getElementById("bgMusic");
-  music.play();
-    
+    const msg = document.getElementById("clickMsg");
+    msg.style.display = "block";
+    setTimeout(() => msg.style.opacity = "1", 300);
+
+    const music = document.getElementById("bgMusic");
+    music.play();
+
+    // smooth scroll ONLY after correct password
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+
   } else {
-    alert("Wrong password....try again🤍");
+    alert("❌ Wrong password… try again 🤍");
   }
-
-  //smooth scroll down
-  window.scrollTo({ top: document.body.scrollheight, behavior: "smooth"});
 }
 
 /* Scroll reveal photos */
@@ -250,6 +251,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
