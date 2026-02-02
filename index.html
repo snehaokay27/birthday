@@ -106,7 +106,8 @@ h1{
 }
 
 /* PHOTOS */
-#photos{ margin-top:25px; }
+#photos{ margin-top:25px;
+       display:none;}
 
 .photo{
   opacity:0;
@@ -202,12 +203,19 @@ I Love Youuuu Endlessly, Deeply, Truly ❤️
 function reveal(){
   document.getElementById("clickBtn").classList.add("hide");
 
+  //show photos after click
+  document.getElementById("photos").style.display = "block";
+  
+
   const msg = document.getElementById("clickMsg");
   msg.style.display = "block";
   setTimeout(()=>msg.style.opacity="1",300);
 
   const music = document.getElementById("bgMusic");
   music.play();
+
+  //smooth scroll down
+  window.scrollTo({ top: document.body.scrollheight, behavior: "smooth"});
 }
 
 /* Scroll reveal photos */
@@ -235,6 +243,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
